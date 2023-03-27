@@ -1,8 +1,7 @@
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 class Main {
   public static void main (String[] args){
-   Scanner kbReader = new Scanner(System.in);
+   Scanner kbReader = new Scanner(System.in);   
     
     System.out.println("Enter your name: ");
     String input = kbReader.nextLine();
@@ -14,5 +13,6 @@ class Main {
       String theMove = kbReader.nextLine();
     newgame.move(theMove);
     }
+    kbReader.close();
   }
 }
