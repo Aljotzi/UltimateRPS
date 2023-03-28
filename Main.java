@@ -6,6 +6,7 @@ class Main {
     System.out.println("Enter your name: ");
     String input = kbReader.nextLine();
     rpsgame newgame = new rpsgame(input);
+    System.out.println("Input R , P or S. ");
     
     boolean play = true;
     while(play){
