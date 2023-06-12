@@ -13,6 +13,7 @@ class Main {
       
       String theMove = kbReader.nextLine();
     newgame.move(theMove);
+    System.out.println("The Score is " + newgame.playerScore + " - " + newgame.computerScore + "." );
     }
     kbReader.close();
   }

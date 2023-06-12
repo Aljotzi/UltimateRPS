@@ -10,8 +10,9 @@ public class rpsgame{
     rps = "";
     botMove = 0;
     randInt = new Random();
-    
   }
+  public int playerScore = 0;
+  public int computerScore = 0;
   public void move(String m){
     rps = m;
     if(rps.equalsIgnoreCase("r")){
@@ -22,9 +23,11 @@ public class rpsgame{
       }
       else if(botMove == 2){
         System.out.println("The bot wins.");
+        computerScore++;
       }
       else if(botMove == 3){
         System.out.println("You win.");
+        playerScore++;
       }
       }
   if(rps.equalsIgnoreCase("p")){
@@ -32,12 +35,14 @@ public class rpsgame{
         AImove();
       if(botMove == 1){
         System.out.println("You win.");
+        playerScore++;
       }
       else if(botMove == 2){
         System.out.println("Tie.");
       }
       else if(botMove == 3){
         System.out.println("The bot wins.");
+        computerScore++;
       }
       }
     if(rps.equalsIgnoreCase("s")){
@@ -45,9 +50,11 @@ public class rpsgame{
         AImove();
       if(botMove == 1){
         System.out.println("The bot wins.");
+        computerScore++;
       }
         else if(botMove == 2){
         System.out.println("You win.");
+        playerScore++;
         }
       else if(botMove == 3){
         System.out.println("Tie.");
@@ -56,7 +63,7 @@ public class rpsgame{
   
   }  
   public void AImove(){
-     botMove = randInt.nextInt(1,4);
+     botMove = randInt.nextInt(4);
     System.out.print(botMove);
   
     if(botMove == 1){
